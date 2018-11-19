@@ -13,7 +13,7 @@ class Create1 extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('test2', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('title');

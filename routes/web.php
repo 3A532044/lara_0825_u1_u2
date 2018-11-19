@@ -13,5 +13,5 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    \App\Post::destroy(2);
+    \App\Post::destroy(3, 5, 7);
 });

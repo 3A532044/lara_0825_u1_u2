@@ -29,5 +29,7 @@ class CreatePostsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('posts');
+        $table ->string('title') ->change();
+        $table ->dropColumn('is_feature') ;
     }
 }

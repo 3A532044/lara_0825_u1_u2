@@ -14,7 +14,8 @@
 Route::get('/', function () {
     //return view('welcome');
     $fourthPost = \App\Post::find(4);
-    dd($fourthPost);
-    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
+    $post=new\App\comments();
+    $post->title='turtle';
+    $post->content='test';
+    $post->save();
 });

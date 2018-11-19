@@ -16,6 +16,10 @@ class Create2 extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('title');
+            $table->string('sss');
+            $table->string('asd');
+            $table->text('content');
         });
     }
 

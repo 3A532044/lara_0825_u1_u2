@@ -13,6 +13,6 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    $posts = \App\Post::all();
-    dd($posts);
+    $post = \App\Post::find(1);
+    dd($post);
 });

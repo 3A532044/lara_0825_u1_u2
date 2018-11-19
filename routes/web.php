@@ -13,6 +13,5 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    $post = \App\Post::find(1);
-    $post->delete();
+    \App\Post::destroy(2);
 });

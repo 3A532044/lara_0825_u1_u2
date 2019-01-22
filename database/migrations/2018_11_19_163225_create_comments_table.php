@@ -28,7 +28,7 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');function (Blueprint $table)
+        Schema::dropIfExists('comment');
         {
             $table->string('title')->change();
             $table->dropColumn('is_feature');

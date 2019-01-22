@@ -11,11 +11,21 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     //return view('welcome');
     $fourthPost = \App\Post::find(4);
     $post=new\App\comments();
     $post->title='turtle';
     $post->content='test';
     $post->save();
+});
+*/
+Route::get('/', function () {
+    //return view('welcome');
+
+$post=\App\Post::find(1);
+foreach($post->comments as $comment) {
+    echo $comment->content . '<br>';
+}
+
 });

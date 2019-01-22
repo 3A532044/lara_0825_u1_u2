@@ -23,9 +23,9 @@
 Route::get('/', function () {
     //return view('welcome');
 
-$post=\App\Post::find(1);
-foreach($post->comments as $comment) {
-    echo $comment->content . '<br>';
-}
+    $post=\App\Post::find(6);
+    foreach($post->comments as $comment){
+        echo $comment->title.'<br>';
+    }
 
 });

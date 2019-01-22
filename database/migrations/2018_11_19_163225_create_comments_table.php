@@ -15,9 +15,9 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comment', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('title');
-            $table->text('content');
+            $table->integer('post_id');
+            $table->timestamps();
         });
     }
 
@@ -28,10 +28,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');
-        {
-            $table->string('title')->change();
-            $table->dropColumn('is_feature');
-        }
+        Schema::dropIfExists('comments');
     }
 }
